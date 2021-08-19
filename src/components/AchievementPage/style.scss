@@ -1,0 +1,26 @@
+.achievement-section {
+  padding: 0 0;
+  margin-top: 50px;
+
+  .achievement-box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    .achie {
+      color: var(--white);
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: 700;
+      //   list-style: none;
+      &::before {
+        // content: "\2022";
+        // margin-right: 10px;
+      }
+      &:first-child {
+        margin-top: 0 !important;
+      }
+    }
+  }
+}

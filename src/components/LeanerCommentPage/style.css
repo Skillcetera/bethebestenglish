@@ -1,0 +1,121 @@
+:root {
+  --sizeOfAvatar: 80px;
+}
+
+.learner-comment-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.learner-comment-section .first-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 40px;
+}
+
+.learner-comment-section .first-line .learner-avatar-wrapper {
+  width: 480px;
+  overflow-x: hidden;
+}
+
+.learner-comment-section .first-line .learner-avatar-wrapper .learner-avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.learner-comment-section .first-line .learner-avatar-wrapper .learner-avatar .a-learner {
+  width: var(--sizeOfAvatar);
+  height: var(--sizeOfAvatar);
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.learner-comment-section .first-line .learner-avatar-wrapper .learner-avatar .a-learner img {
+  width: var(--sizeOfAvatar);
+  height: var(--sizeOfAvatar);
+  border-radius: 50%;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+}
+
+.learner-comment-section .first-line .learner-avatar-wrapper .learner-avatar .active {
+  border: solid 4px white;
+}
+
+.learner-comment-section .first-line .arrow {
+  font-size: 80px;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.learner-comment-section .second-line {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.learner-comment-section .second-line .star-icon {
+  font-size: 50px;
+}
+
+.learner-comment-section .last-line {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 30px 30px;
+}
+
+.learner-comment-section .last-line .category-name {
+  width: 100%;
+}
+
+.learner-comment-section .last-line .category-name .main-title {
+  margin-left: 15%;
+  text-align: center;
+  max-width: 70%;
+  font-size: 30px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.learner-comment-section .last-line .comment {
+  color: var(--white);
+  padding: 10px 50px 0 50px;
+}
+
+.learner-comment-section .last-line .comment .comment-item {
+  margin-top: 7px;
+}
+/*# sourceMappingURL=style.css.map */

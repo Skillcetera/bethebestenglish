@@ -1,0 +1,63 @@
+@import url("../../const/colors.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  width: fit-content;
+  text-rendering: optimizeLegibility;
+  color: var(--textColor);
+}
+body {
+  padding-bottom: 30px;
+  margin: 0;
+  line-height: normal;
+  background-color: var(--primary);
+  width: 100vw;
+}
+.title {
+  font-family: "Times New Roman", Times, serif;
+  text-rendering: optimizeLegibility;
+  color: var(--white);
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  background-color: var(--white);
+  color: var(--primary);
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow);
+}
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}
+.section-line {
+  width: calc(100%);
+  height: 2px;
+  background-color: var(--white);
+  margin: 60px 0;
+}
+.logo {
+  width: var(--logoWidth);
+  height: var(--logoWidth);
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--primary);
+  text-align: center;
+  line-height: var(--logoWidth);
+  font-size: 40px;
+  font-weight: 700;
+}

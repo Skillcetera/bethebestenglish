@@ -1,0 +1,140 @@
+@import url("../../const/colors.css");
+.founder-section {
+  border-radius: 5px;
+  height: auto;
+  padding-bottom: 100px;
+  padding: 0px 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.founder-section .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.founder-section .left-side .tepism-avatar-wrapper {
+  border: solid white 17px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+
+.founder-section .left-side .tepism-avatar-wrapper img {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  right: 5px;
+}
+
+.founder-section .left-side .avatar {
+  width: 80%;
+  border-radius: 0 50px 0 50px;
+}
+
+.founder-section .left-side .description-text {
+  font-size: 35px;
+  text-align: justify;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.founder-section .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.founder-section .right-side .description-text {
+  text-align: center;
+  font-size: 50px;
+  line-height: 130%;
+  max-width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: bold;
+}
+
+.founder-section .right-side .kap-section {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.founder-section .right-side .kap-section .a-letter-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.founder-section .right-side .kap-section .a-letter-section .big-letter {
+  font-size: 60px;
+}
+
+.founder-section .right-side .kap-section .k-line,
+.founder-section .right-side .kap-section .a-line,
+.founder-section .right-side .kap-section .p-line {
+  position: absolute;
+  content: no-close-quote;
+  width: 2px;
+  background-color: white;
+  right: 50%;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.founder-section .right-side .kap-section .k-line {
+  top: calc(100% + 7px);
+}
+
+.founder-section .right-side .kap-section .a-line {
+  top: calc(100% + 7px);
+  width: 3px;
+}
+
+.founder-section .right-side .kap-section .p-line {
+  top: calc(100% + 7px);
+  width: 2px;
+}
+
+.founder-section .right-side .fluency-text {
+  margin-top: 200px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

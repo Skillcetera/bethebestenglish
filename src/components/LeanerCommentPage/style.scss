@@ -1,0 +1,88 @@
+:root {
+  --sizeOfAvatar: 80px;
+}
+.learner-comment-section {
+  width: 100%;
+  // padding: 0 var(--leftSide);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .first-line {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 40px;
+    .learner-avatar-wrapper {
+      width: 480px;
+      overflow-x: hidden;
+      .learner-avatar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        transition: all 0.5s ease-in-out;
+        .a-learner {
+          width: var(--sizeOfAvatar);
+          height: var(--sizeOfAvatar);
+          border-radius: 50%;
+          margin: 0 20px;
+
+          img {
+            width: var(--sizeOfAvatar);
+            height: var(--sizeOfAvatar);
+            border-radius: 50%;
+            box-shadow: var(--shadow-light);
+          }
+        }
+        .active {
+          border: solid 4px white;
+        }
+      }
+    }
+
+    .arrow {
+      font-size: 80px;
+      margin: auto 0;
+      cursor: pointer;
+    }
+  }
+  .second-line {
+    width: 100%;
+    margin: 50px 0;
+    text-align: center;
+    .star-icon {
+      font-size: 50px;
+    }
+  }
+  .last-line {
+    margin-top: 50px;
+    width: 100%;
+    // background-color: var(--white);
+    height: auto;
+    border-radius: 5px;
+    // box-shadow: var(--shadow);
+    padding: 30px 30px;
+    .category-name {
+      width: 100%;
+      .main-title {
+        margin-left: 15%;
+        text-align: center;
+        max-width: 70%;
+        font-size: 30px;
+        color: var(--white);
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        // height: 400px;
+        // background-color: red;
+      }
+    }
+    .comment {
+      color: var(--white);
+      padding: 10px 50px 0 50px;
+      .comment-item {
+        margin-top: 7px;
+      }
+    }
+  }
+}

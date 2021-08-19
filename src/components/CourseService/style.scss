@@ -1,0 +1,38 @@
+:root {
+  --description-height: 50px;
+}
+.course-service-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 33%;
+    .a-service {
+      text-align: center;
+      align-items: center;
+      margin: 0 0 50px 0;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+
+      img {
+        height: var(--box-height);
+        width: var(--box-width);
+        border-radius: 5px 5px 0 0;
+        box-shadow: var(--shadow);
+      }
+      .description {
+        width: var(--box-width);
+        height: fit-content;
+        padding: 10px 10px;
+        background-color: var(--textColor);
+        color: var(--primary);
+        font-weight: bold;
+        border-radius: 0 0 5px 5px;
+        box-shadow: var(--shadow);
+      }
+    }
+  }
+}

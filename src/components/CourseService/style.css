@@ -1,0 +1,66 @@
+:root {
+  --description-height: 50px;
+}
+
+.course-service-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.course-service-section .service-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+}
+
+.course-service-section .service-wrapper .a-service {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.course-service-section .service-wrapper .a-service img {
+  height: var(--box-height);
+  width: var(--box-width);
+  border-radius: 5px 5px 0 0;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+.course-service-section .service-wrapper .a-service .description {
+  width: var(--box-width);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px 10px;
+  background-color: var(--textColor);
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+/*# sourceMappingURL=style.css.map */

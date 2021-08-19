@@ -1,0 +1,51 @@
+.buyNowButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: var(--buy-button-size);
+  height: var(--buy-button-size);
+  background-color: var(--textColor);
+  border-radius: 50%;
+  line-height: var(--buy-button-size);
+  text-align: center;
+  cursor: pointer;
+  animation: shake-animation 3s infinite;
+  line-height: var(--buy-button-size);
+
+  .buyIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary);
+    font-size: 50px;
+  }
+}
+
+//get from others
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(5px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

@@ -1,0 +1,99 @@
+@import url("../../const/colors.css");
+.founder-section {
+  border-radius: 5px;
+  height: auto;
+  padding-bottom: 100px;
+  padding: 0px 0;
+  width: 100%;
+  margin-top: 50px;
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    // background-color: red;
+    justify-content: center;
+    align-items: center;
+    .tepism-avatar-wrapper {
+      border: solid white 17px;
+      width: 300px;
+      height: 400px;
+      position: relative;
+      // overflow: hidden;
+      img {
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        right: 5px;
+      }
+    }
+    .avatar {
+      width: 80%;
+      border-radius: 0 50px 0 50px;
+    }
+    .description-text {
+      font-size: 35px;
+      text-align: justify;
+      width: fit-content;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .description-text {
+      text-align: center;
+      font-size: 50px;
+      line-height: 130%;
+      max-width: 100%;
+      align-self: center;
+      font-weight: bold;
+    }
+    .kap-section {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+      .a-letter-section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .big-letter {
+          font-size: 60px;
+        }
+      }
+      .k-line,
+      .a-line,
+      .p-line {
+        position: absolute;
+        content: no-close-quote;
+        width: 2px;
+        background-color: white;
+        right: 50%;
+        transform-origin: top;
+      }
+      .k-line {
+        // bottom: calc(-150% - 15px);
+        // height: 200px;
+        // transform: rotate(-45deg);
+        top: calc(100% + 7px);
+      }
+      .a-line {
+        top: calc(100% + 7px);
+        // height: 150px;
+        width: 3px;
+      }
+      .p-line {
+        top: calc(100% + 7px);
+        // height: 200px;
+        width: 2px;
+      }
+    }
+    .fluency-text {
+      margin-top: 200px;
+      text-align: center;
+    }
+  }
+}

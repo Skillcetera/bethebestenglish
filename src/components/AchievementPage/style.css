@@ -1,0 +1,24 @@
+.achievement-section {
+  padding: 0 0;
+  margin-top: 50px;
+}
+
+.achievement-section .achievement-box {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.achievement-section .achievement-box .achie {
+  color: var(--white);
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.achievement-section .achievement-box .achie:first-child {
+  margin-top: 0 !important;
+}
+/*# sourceMappingURL=style.css.map */

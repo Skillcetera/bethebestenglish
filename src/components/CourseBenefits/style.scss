@@ -1,0 +1,68 @@
+.course-benefit-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // padding: 0 var(--leftSide);
+  .benefit-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 50%;
+    justify-content: center;
+    .a-benefit-box {
+      background-color: var(--white);
+      width: 400px;
+      height: 200px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+      border-radius: 5px;
+      justify-content: baseline;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      .icon {
+        color: var(--primary);
+        font-size: 80px;
+        margin: 0 auto;
+      }
+
+      .detail-text {
+        font-size: 30px;
+        color: var(--primary);
+        letter-spacing: 0.8px;
+      }
+    }
+  }
+  .below-icon-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .a-total-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 100px;
+      .a-icon {
+        font-size: 100px;
+      }
+      .detail-wrapper {
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: first baseline;
+        margin-left: 10px;
+        .number {
+          font-size: 40px;
+          text-align: flex-start;
+        }
+        .category-name {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.introduce-section {
+  width: 100%;
+}
+
+.introduce-section .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+}
+
+.introduce-section .left-side .course-name {
+  font-size: 40px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 50px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.introduce-section .left-side .course-name::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--textColor);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.introduce-section .left-side .course-description {
+  line-height: 150%;
+}
+
+.introduce-section .right-side .course-image {
+  width: 90%;
+  margin-left: 10%;
+}
+
+.introduce-section .right-side .course-image img {
+  border-radius: 100px 5px 100px 5px;
+  width: 100%;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+}
+
+.introduce-section .register-button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+}
+
+.introduce-section .register-button-wrapper .register-now {
+  margin-left: 10%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation: scale 3s ease-in-out infinite;
+          animation: scale 3s ease-in-out infinite;
+}
+
+.introduce-section .register-button-wrapper .register-now .learn-more-button {
+  margin-top: 30px;
+  background-color: white !important;
+  color: var(--primary);
+  font-family: "Bona Nova", serif !important;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
