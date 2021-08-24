@@ -6,20 +6,20 @@ import IntroductionOfCourse from "../IntroductionOfCourse";
 import Testimonials from "../Testimonials";
 import "./style.css";
 function ACoursePage(props) {
-  const { courseName } = props.match.params;
+    // const { courseName } = props.match.params;
 
-  return (
-    <Grid container className="ACourse-Page">
-      <IntroductionOfCourse />
-      <div className="section-line"></div>
-      <CourseService />
-      <div className="section-line"></div>
-      <Testimonials />
-      {/* <BuyNowButton /> */}
-      <div className="section-line"></div>
-      <div className="logo">best</div>
-    </Grid>
-  );
+    return (
+        <Grid container className="ACourse-Page">
+            <IntroductionOfCourse />
+            <div className="section-line"></div>
+            <CourseService />
+            <div className="section-line"></div>
+            <Testimonials />
+            {/* <BuyNowButton /> */}
+            <div className="section-line"></div>
+            <div className="logo">best</div>
+        </Grid>
+    );
 }
 
 export default ACoursePage;

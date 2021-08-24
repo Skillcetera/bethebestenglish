@@ -1,271 +1,281 @@
 :root {
-  --xs: 0px;
-  --sm: 600px;
-  --md: 960px;
-  --lg: 1280px;
-  --xl: 1920px;
+    --xs: 0px;
+    --sm: 600px;
+    --md: 960px;
+    --lg: 1280px;
+    --xl: 1920px;
 }
 
 /* smaller than lg breakpoint */
 @media screen and (max-width: 1280px) {
-  :root {
-    --leftSide: 100px;
-  }
-  body {
-    width: 100vw;
-  }
-  .title {
-    font-size: 30px;
-  }
-  .homepage-wrapper {
-    .welcome-page {
-      .right-side {
-        display: none;
-        align-items: center;
-        .learn-more-button {
-          margin-top: 100px;
-        }
-      }
+    :root {
+        --leftSide: 100px;
     }
-    .founder-section {
-      .left-side {
-        margin-bottom: 100px;
-        .avatar {
-          width: 60%;
-        }
-      }
-      .right-side {
-        .description-text {
-          width: 100%;
-          font-size: 42px;
-        }
-      }
+    body {
+        width: 100vw;
     }
-    .course-benefit-section {
-      .a-benefit-box {
-        width: 300px;
-        height: 150px;
-        .detail-text {
-          font-size: 22px;
-        }
-      }
-      .a-total-wrapper {
-        .a-icon {
-          font-size: 60px;
-        }
-        .detail-wrapper {
-          .number {
-            font-size: 24px;
-          }
-          .category-name {
-            font-size: 18px;
-          }
-        }
-      }
+    .title {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
     }
-    .learner-comment-section {
-      .main-title {
-        max-width: 100% !important;
-        margin-left: 0% !important;
-      }
+    .homepage-wrapper {
+        .welcome-page {
+            .right-side {
+                display: none;
+                align-items: center;
+                .learn-more-button {
+                    margin-top: 100px;
+                }
+            }
+        }
+        .founder-section {
+            .left-side {
+                margin-bottom: 100px;
+                .avatar {
+                    width: 60%;
+                }
+            }
+            .right-side {
+                .description-text {
+                    width: 100%;
+                    font-size: 42px;
+                }
+            }
+        }
+        .course-benefit-section {
+            .a-benefit-box {
+                width: 300px;
+                height: 150px;
+                margin: 20px;
+                .detail-text {
+                    font-size: 22px;
+                }
+            }
+            .a-total-wrapper {
+                .a-icon {
+                    font-size: 60px;
+                }
+                .detail-wrapper {
+                    .number {
+                        font-size: 24px;
+                    }
+                    .category-name {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .learner-comment-section {
+            .main-title {
+                max-width: 100% !important;
+                margin-left: 0% !important;
+            }
+        }
     }
-  }
 }
 
 @media screen and (max-width: 600px) {
-  :root {
-    --logoWidth: 70px;
-    --leftSide: 8%;
-    --navHeight: 30px;
-    --sizeOfAvatar: 50px;
-    --box-width: 80%;
-    --box-height: 80px;
-  }
-
-  .title {
-    font-size: 18px;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-  }
-  .section-line {
-    margin: 40px 0;
-  }
-  .homepage-wrapper {
-    padding: 0 30px;
-  }
-  .logo {
-    font-size: 20px;
-  }
-  .course-section {
-    .course-box-wrapper {
-      flex-basis: 45% !important;
-    }
-  }
-  .navigation-wrapper {
-    .item {
-      width: 25%;
-      font-size: 20px;
-      font-weight: 500;
-      padding: 5px 0 5px var(--leftSide) !important;
-    }
-    .nav-options-right {
-      margin-right: unset;
-    }
-  }
-  .welcome-page {
-    .left-side {
-      .welcome-text {
-        .text {
-          font-size: 20px;
-        }
-        .done-icon {
-          font-size: 30px !important;
-        }
-      }
-    }
-    .right-side {
-      display: none;
-    }
-  }
-  .achievement-section {
-    .achievement-box {
-      padding: 0px;
-      .achie {
-        font-size: 15px;
-      }
-    }
-  }
-  .course-benefit-section {
-    .below-icon-section {
-      flex-direction: column;
-      .a-total-wrapper {
-        justify-content: flex-start;
-        margin-top: 20px;
-      }
+    :root {
+        --logoWidth: 70px;
+        --leftSide: 5%;
+        --navHeight: 30px;
+        --sizeOfAvatar: 50px;
+        --box-width: 90%;
+        --box-height: 140px;
     }
 
-    .a-benefit-box {
-      width: 200px !important;
-      height: 100px !important;
-      .icon {
-        font-size: 50px !important;
-      }
-      .detail-text {
-        font-size: 16px !important;
-      }
-    }
-  }
-  .learner-comment-section {
-    .first-line {
-      width: 100%;
-      .arrow {
-        font-size: 50px;
-      }
-      .learner-avatar-wrapper {
-        .learner-avatar {
-          .a-learner {
-            margin: 0 8px;
-          }
-        }
-      }
-    }
-    .second-line {
-      margin: 15px 0;
-      .star-icon {
-        font-size: 35px;
-      }
-    }
-    .last-line {
-      margin-top: 20px;
-      padding: 30px 15px;
-      .category-name {
-        .main-title {
-          font-size: 13px;
-        }
-      }
-    }
-  }
-  .navigation-wrapper {
-    height: fit-content;
-    flex-direction: column;
-    .nav-options-left {
-      margin-left: unset;
-      flex-direction: column;
-    }
-    .nav-options-right {
-      // margin-left: var(--leftSide);
-    }
-    .item {
-      width: 100% !important;
-      text-align: start !important;
-    }
-  }
-  .founder-section {
-    .left-side {
-      margin-bottom: 30px !important;
-      .avatar {
+    .title {
+        font-size: 18px;
         margin-bottom: 20px;
-      }
-      .description-text {
-        font-size: 25px;
-      }
-      .description-text-small {
+        letter-spacing: 0.5px;
+    }
+    .section-line {
+        margin: 40px 0;
+    }
+    .homepage-wrapper {
+        padding: 0 var(--leftSide);
+    }
+    .logo {
         font-size: 20px;
-      }
     }
-    .right-side {
-      .description-text {
-        font-size: 30px !important;
-      }
-      .kap-section {
-        display: none;
-      }
-      .fluency-text {
-        display: none;
-      }
-    }
-  }
-  .introduce-section {
-    .left-side {
-      .course-name {
-        font-size: 20px;
-      }
-      .course-description {
-        font-size: 12px;
-      }
-    }
-    .right-side {
-      .course-image {
-        width: 100%;
-        margin-left: 0%;
-        margin-top: 30px;
-      }
-    }
-    .register-button-wrapper {
-      .register-now {
-        margin-left: 0%;
-      }
-    }
-  }
-  .course-service-section {
-    .service-wrapper {
-      .a-service {
-        .description {
-          font-size: 12px;
-          padding: 5px 5px;
+    .course-section {
+        .course-box-wrapper {
+            flex-basis: 100% !important;
+            .img {
+                box-shadow: var(--shadow-light) !important;
+            }
         }
-      }
     }
-  }
-  .testimonials-section {
-    .comment-section {
-      .comment-wrapper {
-        .information-of-learner {
-          img {
-            border-radius: 10px;
-          }
+    .navigation-wrapper {
+        .item {
+            width: 25%;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 5px 0 5px var(--leftSide) !important;
         }
-      }
+        .nav-options-right {
+            margin-right: unset;
+        }
     }
-  }
+    .welcome-page {
+        .left-side {
+            .welcome-text {
+                .text {
+                    font-size: 20px;
+                }
+                .done-icon {
+                    // font-size: 30px !important;
+                }
+            }
+        }
+        .right-side {
+            display: none;
+        }
+    }
+    .achievement-section {
+        .achievement-box {
+            padding: 0px;
+            .achie {
+                font-size: 15px;
+            }
+        }
+    }
+    .course-benefit-section {
+        .below-icon-section {
+            flex-direction: column;
+            .a-total-wrapper {
+                justify-content: flex-start;
+                margin-top: 20px;
+            }
+        }
+
+        .a-benefit-box {
+            width: 200px !important;
+            height: 100px !important;
+            .icon {
+                font-size: 50px !important;
+            }
+            .detail-text {
+                font-size: 16px !important;
+            }
+        }
+    }
+    .learner-comment-section {
+        .first-line {
+            width: 100%;
+            .arrow {
+                font-size: 50px;
+            }
+            .learner-avatar-wrapper {
+                min-width: 238px;
+                width: 238px;
+                .learner-avatar {
+                    .a-learner {
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+        .second-line {
+            margin: 15px 0;
+            .star-icon {
+                font-size: 35px;
+            }
+        }
+        .last-line {
+            margin-top: 20px;
+            padding: 30px 15px;
+            .category-name {
+                .main-title {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .navigation-wrapper {
+        height: fit-content;
+        flex-direction: column;
+        .nav-options-left {
+            margin-left: unset;
+            flex-direction: column;
+        }
+        .nav-options-right {
+            // margin-left: var(--leftSide);
+        }
+        .item {
+            width: 100% !important;
+            text-align: start !important;
+        }
+    }
+    .founder-section {
+        .left-side {
+            margin-bottom: 30px !important;
+            .avatar {
+                margin-bottom: 20px;
+            }
+            .description-text {
+                font-size: 25px;
+            }
+            .description-text-small {
+                font-size: 20px;
+            }
+        }
+        .right-side {
+            .description-text {
+                // font-size: 30px !important;
+            }
+            .kap-section {
+                display: none;
+            }
+            .fluency-text {
+                display: none;
+            }
+        }
+    }
+    .introduce-section {
+        .left-side {
+            .course-name {
+                font-size: 20px;
+            }
+            .course-description {
+                font-size: 12px;
+            }
+        }
+        .right-side {
+            .course-image {
+                width: 100%;
+                margin-left: 0%;
+                margin-top: 30px;
+            }
+        }
+        .register-button-wrapper {
+            .register-now {
+                margin-left: 0%;
+            }
+        }
+    }
+    .course-service-section {
+        .service-wrapper {
+            .a-service {
+                .description {
+                    // font-size: 12px;
+                    // padding: 5px 5px;
+                }
+            }
+        }
+    }
+    .testimonials-section {
+        .comment-section {
+            .comment-wrapper {
+                .information-of-learner {
+                    img {
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .ACourse-Page {
+        padding: 40px var(--leftSide);
+    }
 }

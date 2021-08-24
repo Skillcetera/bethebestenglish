@@ -15,7 +15,8 @@
     width: 100vw;
   }
   .title {
-    font-size: 30px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
   .homepage-wrapper .welcome-page .right-side {
     display: none;
@@ -39,6 +40,7 @@
   .homepage-wrapper .course-benefit-section .a-benefit-box {
     width: 300px;
     height: 150px;
+    margin: 20px;
   }
   .homepage-wrapper .course-benefit-section .a-benefit-box .detail-text {
     font-size: 22px;
@@ -61,11 +63,11 @@
 @media screen and (max-width: 600px) {
   :root {
     --logoWidth: 70px;
-    --leftSide: 8%;
+    --leftSide: 5%;
     --navHeight: 30px;
     --sizeOfAvatar: 50px;
-    --box-width: 80%;
-    --box-height: 80px;
+    --box-width: 90%;
+    --box-height: 140px;
   }
   .title {
     font-size: 18px;
@@ -76,14 +78,18 @@
     margin: 40px 0;
   }
   .homepage-wrapper {
-    padding: 0 30px;
+    padding: 0 var(--leftSide);
   }
   .logo {
     font-size: 20px;
   }
   .course-section .course-box-wrapper {
-    -ms-flex-preferred-size: 45% !important;
-        flex-basis: 45% !important;
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+  }
+  .course-section .course-box-wrapper .img {
+    -webkit-box-shadow: var(--shadow-light) !important;
+            box-shadow: var(--shadow-light) !important;
   }
   .navigation-wrapper .item {
     width: 25%;
@@ -96,9 +102,6 @@
   }
   .welcome-page .left-side .welcome-text .text {
     font-size: 20px;
-  }
-  .welcome-page .left-side .welcome-text .done-icon {
-    font-size: 30px !important;
   }
   .welcome-page .right-side {
     display: none;
@@ -137,8 +140,12 @@
   .learner-comment-section .first-line .arrow {
     font-size: 50px;
   }
+  .learner-comment-section .first-line .learner-avatar-wrapper {
+    min-width: 238px;
+    width: 238px;
+  }
   .learner-comment-section .first-line .learner-avatar-wrapper .learner-avatar .a-learner {
-    margin: 0 8px;
+    margin: 0 5px;
   }
   .learner-comment-section .second-line {
     margin: 15px 0;
@@ -185,9 +192,6 @@
   .founder-section .left-side .description-text-small {
     font-size: 20px;
   }
-  .founder-section .right-side .description-text {
-    font-size: 30px !important;
-  }
   .founder-section .right-side .kap-section {
     display: none;
   }
@@ -208,12 +212,11 @@
   .introduce-section .register-button-wrapper .register-now {
     margin-left: 0%;
   }
-  .course-service-section .service-wrapper .a-service .description {
-    font-size: 12px;
-    padding: 5px 5px;
-  }
   .testimonials-section .comment-section .comment-wrapper .information-of-learner img {
     border-radius: 10px;
+  }
+  .ACourse-Page {
+    padding: 40px var(--leftSide);
   }
 }
 /*# sourceMappingURL=responsive.css.map */

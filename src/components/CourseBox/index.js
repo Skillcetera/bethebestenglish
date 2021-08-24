@@ -18,11 +18,3 @@ function CourseBox(props) {
 }
 
 export default CourseBox;
-
-/* <div className="course-box">
-        <Link to={`/courses/${name}`}>
-          <img src={img} alt="course" />
-        </Link>
-      </div> */
-
-/* <img src={img} alt="course" /> */

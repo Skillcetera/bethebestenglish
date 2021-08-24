@@ -9,22 +9,26 @@ import CourseBenefits from "../CourseBenefits";
 import LearnerCommentPage from "../LeanerCommentPage";
 import { highLightCourse } from "../../const/CoursesData";
 function HomePage() {
-  return (
-    <Grid container className="homepage-wrapper">
-      <WelcomeSection />
-      <div className="section-line"></div>
-      <FounderSection />
-      <AchievementPage />
-      <div className="section-line"></div>
-      <CourseSection data={highLightCourse} title="Khóa học Input" />
-      <div className="section-line"></div>
-      <CourseBenefits />
-      <div className="section-line"></div>
-      <LearnerCommentPage />
-      <div className="section-line"></div>
-      <div className="logo">best</div>
-    </Grid>
-  );
+    return (
+        <Grid container className="w-full homepage-wrapper">
+            <WelcomeSection />
+            <div className="section-line"></div>
+            <FounderSection />
+            <AchievementPage />
+            <div className="section-line"></div>
+            <CourseSection
+                data={highLightCourse}
+                title="Khóa học Input"
+                limitForMobile={true}
+            />
+            <div className="section-line"></div>
+            <CourseBenefits />
+            <div className="section-line"></div>
+            <LearnerCommentPage />
+            <div className="section-line"></div>
+            <div className="logo">best</div>
+        </Grid>
+    );
 }
 
 export default HomePage;
