@@ -3,11 +3,11 @@ import { Grid } from "@material-ui/core";
 import WelcomeSection from "../WelcomeSection";
 import "./style.css";
 import FounderSection from "../FounderSection";
-import CourseSection from "../CourseSection";
 import AchievementPage from "../AchievementPage";
 import CourseBenefits from "../CourseBenefits";
 import LearnerCommentPage from "../LeanerCommentPage";
 import { highLightCourse } from "../../const/CoursesData";
+import CourseSectionOfHomePage from "../CourseSectionOfHomePage";
 function HomePage() {
     return (
         <Grid container className="w-full homepage-wrapper">
@@ -16,10 +16,9 @@ function HomePage() {
             <FounderSection />
             <AchievementPage />
             <div className="section-line"></div>
-            <CourseSection
+            <CourseSectionOfHomePage
                 data={highLightCourse}
                 title="Khóa học Input"
-                limitForMobile={true}
             />
             <div className="section-line"></div>
             <CourseBenefits />

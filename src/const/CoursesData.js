@@ -1,6 +1,6 @@
 export const coursesData = [
     {
-        courseAvatar: "../images/1.png ",
+        courseAvatar: "../images/inputLogo.jpg ",
         name: "input",
         bigImage: "../images/input.jpg",
         description:
@@ -47,6 +47,59 @@ export const coursesData = [
             {
                 avatar: "../images/learner/loc.jpg",
                 name: "Nguyen Van C",
+                comment:
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
+            },
+        ],
+    },
+    {
+        courseAvatar: "../images/outputLogo.png ",
+        name: "output",
+        bigImage: "../images/outputBigImage.jpg",
+        description:
+            "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,",
+        courseServices: [
+            {
+                img: "../images/service.jpg",
+                title: "Ra trường đúng hạn",
+            },
+            {
+                img: "../images/service1.jpg",
+                title: "Bao đậu tốt nghiệp",
+            },
+            {
+                img: "../images/service2.jpg",
+                title: "Pass môn đều",
+            },
+            {
+                img: "../images/service3.jpg",
+                title: "game là dễ",
+            },
+            {
+                img: "../images/service4.jpg",
+                title: "Nền vững chắc",
+            },
+            {
+                img: "../images/service5.jpg",
+                title: "10 điểm 5 môn",
+            },
+        ],
+        testimonials: [
+            {
+                avatar: "../images/learner/minh.jpg",
+                name: "Nguyen Van D",
+                comment:
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
+            },
+            {
+                avatar: "../images/learner/bach.jpg",
+                name: "Nguyen Van E",
+                comment:
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
+            },
+            {
+                avatar: "../images/learner/duy.jpg",
+                name: "Nguyen Van F",
                 comment:
                     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
             },
