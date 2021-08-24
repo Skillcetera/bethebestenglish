@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FacebookIcon from "@material-ui/icons/Facebook";
 function RegisterPage() {
     return (
         <div className="w-full max-w-xl mx-auto login-page">

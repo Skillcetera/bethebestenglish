@@ -6,9 +6,10 @@ import { useEffect } from "react";
 import { changeThemeBySection } from "../../util/supportFunction";
 import "./responsive.css";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useHistory } from "react-router-dom";
 function App() {
     const sectionList = document.getElementsByClassName("item");
-
+    const history = useHistory();
     const matchLgDevice = useMediaQuery("(max-width: 1280px)");
     const setUp = () => {
         if (matchLgDevice) {
@@ -36,7 +37,22 @@ function App() {
                 changeThemeBySection(e);
             }
         }
-    }, [sectionList]);
+        history.listen((location) => {
+            const { pathname } = location;
+            let currentSection = pathname.split("/")[1].toUpperCase();
+
+            if (currentSection === "") {
+                currentSection = "HOME";
+            }
+            for (let i = 0; i < sectionList.length; i++) {
+                const e = sectionList[i];
+                const text = e.innerText;
+                if (text === currentSection) {
+                    changeThemeBySection(e);
+                }
+            }
+        });
+    }, [sectionList, history]);
     const renderContent = () => {
         let result;
         result = routes.map((route) => {

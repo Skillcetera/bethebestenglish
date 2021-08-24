@@ -52,7 +52,7 @@ function LoginPage() {
                     </div>
                 </form>
                 <div className="my-0 section-line"></div>
-                <div className="mt-0 mt-1 text-center">hoặc</div>
+                <div className="mt-1 text-center">hoặc</div>
                 <FacebookIcon className="mx-auto mt-4 text-4xl" />
             </div>
         </div>

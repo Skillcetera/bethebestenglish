@@ -1,53 +1,82 @@
 export const coursesData = [
-  {
-    img: "../images/1.png ",
-    name: "input",
-  },
-  {
-    img: "../images/2.png ",
-    name: "input",
-  },
-  {
-    img: "../images/3.png ",
-    name: "input",
-  },
-  {
-    img: "../images/4.png ",
-    name: "input",
-  },
-  {
-    img: "../images/5.png ",
-    name: "input",
-  },
-  {
-    img: "../images/6.png ",
-    name: "input",
-  },
+    {
+        courseAvatar: "../images/1.png ",
+        name: "input",
+        bigImage: "../images/input.jpg",
+        description:
+            '"INPUT 2020" là một khóa học đặc biệt dành riêng cho các bạn sinh viên, với hệ thống lý thuyết cô đọng, trọng tâm nhằm giúp cho các bạn sinh viên nhanh chóng lấy lại kiến thức nền tảng một cách hiệu quả nhất. Hơn thế nữa, “INPUT 2020” còn là khoá học cung cấp kĩ năng hàng đầu cho sinh viên học tập trong môi tr"',
+        courseServices: [
+            {
+                img: "../images/service.jpg",
+                title: "Cải thiện phát âm",
+            },
+            {
+                img: "../images/service1.jpg",
+                title: "Kiến thức vững",
+            },
+            {
+                img: "../images/service2.jpg",
+                title: "Tăng sự tự tin",
+            },
+            {
+                img: "../images/service3.jpg",
+                title: "Nghe, nói, đọc, viết",
+            },
+            {
+                img: "../images/service4.jpg",
+                title: "Áp dụng thực tế",
+            },
+            {
+                img: "../images/service5.jpg",
+                title: "Kĩ năng tự học",
+            },
+        ],
+        testimonials: [
+            {
+                avatar: "../images/learner/tri.jpg",
+                name: "Nguyen Van A",
+                comment:
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
+            },
+            {
+                avatar: "../images/learner/duc.jpg",
+                name: "Nguyen Van B",
+                comment:
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
+            },
+            {
+                avatar: "../images/learner/loc.jpg",
+                name: "Nguyen Van C",
+                comment:
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled",
+            },
+        ],
+    },
 ];
 
 export const highLightCourse = [
-  {
-    img: "../images/input1.jpg",
-    name: "input1",
-  },
-  {
-    img: "../images/input2_fix.jpg",
-    name: "input2",
-  },
-  {
-    img: "../images/input3.jpg",
-    name: "input3",
-  },
-  {
-    img: "../images/input4.jpg",
-    name: "input4",
-  },
-  {
-    img: "../images/input5.jpg",
-    name: "input5",
-  },
-  {
-    img: "../images/input6.jpg",
-    name: "input6",
-  },
+    {
+        img: "../images/input1.jpg",
+        name: "input",
+    },
+    {
+        img: "../images/input2_fix.jpg",
+        name: "input",
+    },
+    {
+        img: "../images/input3.jpg",
+        name: "input",
+    },
+    {
+        img: "../images/input4.jpg",
+        name: "input",
+    },
+    {
+        img: "../images/input5.jpg",
+        name: "input",
+    },
+    {
+        img: "../images/input6.jpg",
+        name: "input",
+    },
 ];
