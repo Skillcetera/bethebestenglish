@@ -12,7 +12,7 @@ function FounderSection() {
         let aLine = document.getElementsByClassName("a-line")[0];
         let pLine = document.getElementsByClassName("p-line")[0];
         let centerElement = document.getElementsByClassName("fluency-text")[0];
-        let centerWidth = centerElement.offsetWidth;
+        // let centerWidth = centerElement.offsetWidth;
         let kWidth = kElement.offsetWidth;
         let aWidth = aElement.offsetWidth;
         let pWidth = pElement.offsetWidth;

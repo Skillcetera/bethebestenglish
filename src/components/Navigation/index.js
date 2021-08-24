@@ -32,6 +32,7 @@ function Navigation() {
                     textColor="#ffff"
                     themeColor="#E16E79"
                     activeClassName="active"
+                    exact={false}
                 >
                     Courses
                 </NavLink>
