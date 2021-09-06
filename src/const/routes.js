@@ -1,5 +1,5 @@
 import ACoursePage from "../components/ACoursePage";
-import buyPage from "../components/buyPage/index.jsx";
+import BuyPage from "../components/buyPage/index.jsx";
 import CommunityPage from "../components/CommunityPage";
 import CoursesPage from "../components/CoursesPage";
 import HomePage from "../components/HomePage";
@@ -40,6 +40,6 @@ export const routes = [
     {
         path: "/courses/:courseName/buy",
         exact: true,
-        component: buyPage,
+        component: BuyPage,
     },
 ];

@@ -40,7 +40,6 @@ function App() {
         history.listen((location) => {
             const { pathname } = location;
             let currentSection = pathname.split("/")[1].toUpperCase();
-
             if (currentSection === "") {
                 currentSection = "HOME";
             }
@@ -58,7 +57,6 @@ function App() {
         result = routes.map((route) => {
             return <ContentRoute route={route} />;
         });
-
         return result;
     };
     return (

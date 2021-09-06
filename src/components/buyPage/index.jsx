@@ -1,8 +1,37 @@
 import React from "react";
-
-function buyPage(props) {
+import { useForm } from "react-hook-form";
+const defaultValue = {
+    nameOfCourse: "",
+    name: "",
+    email: "",
+    phoneNumber: "",
+    note: "",
+};
+function BuyPage(props) {
+    const axios = require("axios").default;
+    const codeToken = "1957042605:AAHVcLdMb1hBoiL6LJkUzqQWWazN_h6OT5M";
     const { match } = props;
     const courseName = match.params.courseName.toUpperCase();
+    const { register, handleSubmit, reset } = useForm({
+        defaultValues: {
+            ...defaultValue,
+            nameOfCourse: courseName,
+        },
+    });
+    const onSubmit = (data) => {
+        const { email, name, nameOfCourse, note, phoneNumber } = data;
+        const newDay = new Date().toLocaleString("en-US", {
+            timeZone: "Asia/Ho_Chi_Minh",
+        });
+
+        const dataToSend = `Day: ${newDay} ----- name : ${name} ----- course :  ${nameOfCourse} ----- email : ${email} ----- phone : ${phoneNumber} ----- note : ${note}`;
+
+        const url = `https://api.telegram.org/bot${codeToken}/sendMessage?chat_id=${-471576061}&text=${dataToSend}`;
+        console.log(url);
+        axios.get(url).then(() => {
+            reset();
+        });
+    };
 
     return (
         <div className="w-full max-w-xl mx-auto login-page">
@@ -13,6 +42,7 @@ function buyPage(props) {
                 <form
                     class="bg-courseColor  rounded  pt-6 pb-8 mb-4"
                     autoComplete
+                    onSubmit={handleSubmit(onSubmit)}
                 >
                     <div class="mb-4">
                         <label
@@ -25,10 +55,9 @@ function buyPage(props) {
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="nameOfCourse"
                             type="text"
-                            placeholder="Username"
                             required
-                            value={courseName}
                             disabled
+                            {...register("nameOfCourse")}
                         />
                     </div>
                     <div class="mb-4">
@@ -44,6 +73,7 @@ function buyPage(props) {
                             type="text"
                             placeholder="Tên của bạn"
                             required
+                            {...register("name")}
                         />
                     </div>
                     <div class="mb-4">
@@ -59,6 +89,7 @@ function buyPage(props) {
                             type="email"
                             placeholder="Email@gmail.com"
                             required
+                            {...register("email")}
                         />
                     </div>
                     <div class="mb-4">
@@ -74,6 +105,7 @@ function buyPage(props) {
                             type="tel"
                             placeholder="Số điện thoại của bạn/gia đình bạn"
                             required
+                            {...register("phoneNumber")}
                         />
                     </div>
                     <div class="mb-6">
@@ -90,6 +122,7 @@ function buyPage(props) {
                             id="phoneNumber"
                             type="tel"
                             placeholder="Nhưng thứ mà tôi cần lưu ý"
+                            {...register("note")}
                         />
                     </div>
                     <div class="flex items-center flex-col  justify-between">
@@ -106,4 +139,4 @@ function buyPage(props) {
     );
 }
 
-export default buyPage;
+export default BuyPage;
