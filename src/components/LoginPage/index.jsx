@@ -2,12 +2,40 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import FacebookIcon from "@material-ui/icons/Facebook";
+import { useForm } from "react-hook-form";
+import * as database from "../../const/database";
+import { useHistory } from "react-router-dom";
+const axios = require("axios").default;
+
 function LoginPage() {
+    const { register, handleSubmit, reset } = useForm();
+    const url = `http://${database.dataBaseUrl}/account/login`;
+    const history = useHistory();
+    const onSubmit = async (data) => {
+        let res;
+
+        res = await axios
+            .post(url, data, {
+                withCredentials: true,
+            })
+            .then(() => {
+                history.push("/");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        reset();
+    };
+
     return (
         <div className="w-full max-w-xl mx-auto login-page">
             <div className="flex flex-col align-middle">
                 <div className="mt-8 mb-2 text-2xl text-center">Đăng nhập</div>
-                <form class="bg-loginColor  rounded  pt-6 pb-8 mb-4">
+                <form
+                    class="bg-loginColor  rounded  pt-6 pb-8 mb-4"
+                    onSubmit={handleSubmit(onSubmit)}
+                >
                     <div class="mb-4">
                         <label
                             class="block text-white text-sm font-bold mb-2"
@@ -20,6 +48,14 @@ function LoginPage() {
                             id="username"
                             type="text"
                             placeholder="Username"
+                            required
+                            {...register(
+                                "userName"
+                                // {
+                                //     min: 6,
+                                //     max: 50,
+                                // }
+                            )}
                         />
                     </div>
                     <div class="mb-6">
@@ -34,12 +70,20 @@ function LoginPage() {
                             id="password"
                             type="password"
                             placeholder="*********"
+                            required
+                            {...register(
+                                "password"
+                                //  {
+                                //     min: 6,
+                                //     max: 50,
+                                // }
+                            )}
                         />
                     </div>
                     <div class="flex items-center flex-col  justify-between">
                         <button
-                            class="bg-white text-loginColor font-bold py-2 px-5 w-full rounded focus:outline-none focus:shadow-outline"
                             type="submit"
+                            class="bg-white text-loginColor font-bold py-2 px-5 w-full rounded focus:outline-none focus:shadow-outline"
                         >
                             Đăng nhập
                         </button>

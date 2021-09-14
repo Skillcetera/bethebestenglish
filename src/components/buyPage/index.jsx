@@ -27,8 +27,7 @@ function BuyPage(props) {
         const dataToSend = `Day: ${newDay} ----- name : ${name} ----- course :  ${nameOfCourse} ----- email : ${email} ----- phone : ${phoneNumber} ----- note : ${note}`;
 
         const url = `https://api.telegram.org/bot${codeToken}/sendMessage?chat_id=${-471576061}&text=${dataToSend}`;
-        console.log(url);
-        axios.get(url).then(() => {
+        axios.post(url).then(() => {
             reset();
         });
     };

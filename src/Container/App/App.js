@@ -7,11 +7,17 @@ import { changeThemeBySection } from "../../util/supportFunction";
 import "./responsive.css";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useHistory } from "react-router-dom";
+import * as authActionCraetor from "../../actions/authActions";
+import { useDispatch, useSelector } from "react-redux";
+import Auth from "../Auth";
 function App() {
     const sectionList = document.getElementsByClassName("item");
     const history = useHistory();
     const matchLgDevice = useMediaQuery("(max-width: 1280px)");
+    const isLogin = useSelector((state) => state.auth.isLogin);
+    const dispatch = useDispatch();
     const setUp = () => {
+        //set with
         if (matchLgDevice) {
             const courseElementWidth =
                 document.getElementsByClassName("img")?.[0]?.clientWidth;
@@ -23,7 +29,20 @@ function App() {
                 );
             }
         }
+        //check cookie for login user
+        let cookie;
+        const cookieList = document.cookie.split(";");
+        cookieList.forEach((element) => {
+            const cookieString = element.split("=");
+            if (cookieString[0].trim() === "x-auth-token") {
+                cookie = cookieString[1];
+            }
+        });
+        if (cookie) {
+            dispatch(authActionCraetor.setLogin(true));
+        }
     };
+
     window.addEventListener("resize", () => {
         setUp();
     });
@@ -62,6 +81,7 @@ function App() {
     return (
         <div className="container-fluid">
             <Navigation />
+            <Auth>{isLogin}</Auth>
             {renderContent()}
         </div>
     );
