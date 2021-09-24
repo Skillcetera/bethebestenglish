@@ -1,9 +1,10 @@
-import * as types from "../const/authActions";
+import * as types from "../const/authActionsConstants";
 const initialState = {
-    name: null,
+    userName: null,
     email: null,
     _id: null,
     isLogin: false,
+    avatar: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -12,8 +13,7 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...initialState,
             };
-        case types.GET_DATA:
-            console.log(action);
+        case types.GET_USER:
             return {
                 ...state,
             };
@@ -21,6 +21,16 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLogin: action.payload,
+            };
+        case types.SET_USER:
+            const { _id, email, isAdmin, userName, avatar } = action.payload;
+            return {
+                ...state,
+                userName,
+                email,
+                isAdmin,
+                _id,
+                avatar,
             };
         default:
             return {

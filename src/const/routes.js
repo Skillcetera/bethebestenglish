@@ -4,6 +4,7 @@ import CommunityPage from "../components/CommunityPage";
 import CoursesPage from "../components/CoursesPage";
 import HomePage from "../components/HomePage";
 import LoginPage from "../components/LoginPage/index.jsx";
+import Me from "../Container/me";
 import RegisterPage from "../components/RegisterPage";
 
 export const routes = [
@@ -41,5 +42,10 @@ export const routes = [
         path: "/courses/:courseName/buy",
         exact: true,
         component: BuyPage,
+    },
+    {
+        path: "/me",
+        exact: true,
+        component: Me,
     },
 ];

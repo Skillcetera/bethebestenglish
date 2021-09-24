@@ -1,4 +1,3 @@
-import Navigation from "../../components/Navigation";
 import "./App.css";
 import { routes } from "../../const/routes";
 import ContentRoute from "../../components/ContentRoute";
@@ -8,15 +7,18 @@ import "./responsive.css";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useHistory } from "react-router-dom";
 import * as authActionCraetor from "../../actions/authActions";
+import * as courseActionCreator from "../../actions/courseAction";
 import { useDispatch, useSelector } from "react-redux";
 import Auth from "../Auth";
+import Navigation from "../Navigation";
+import axiosClient from "../../axios/config";
 function App() {
     const sectionList = document.getElementsByClassName("item");
     const history = useHistory();
     const matchLgDevice = useMediaQuery("(max-width: 1280px)");
     const isLogin = useSelector((state) => state.auth.isLogin);
     const dispatch = useDispatch();
-    const setUp = () => {
+    const setUp = async () => {
         //set with
         if (matchLgDevice) {
             const courseElementWidth =
@@ -41,6 +43,10 @@ function App() {
         if (cookie) {
             dispatch(authActionCraetor.setLogin(true));
         }
+        //get course and set to redux store
+        const response = await axiosClient.get("/api/course");
+        const data = response.data.data[0];
+        dispatch(courseActionCreator.getCourse(data));
     };
 
     window.addEventListener("resize", () => {

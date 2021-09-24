@@ -10,6 +10,8 @@ module.exports = {
             homeColor: "#317973",
             loginColor: "#46AFD0",
             communityColor: "#D4A555",
+            cOrange: "#FE7235",
+            successColor: "#07BC0C",
         },
         spacing: {
             ...theme.spacing,

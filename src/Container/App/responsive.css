@@ -91,6 +91,11 @@
     -webkit-box-shadow: var(--shadow-light) !important;
             box-shadow: var(--shadow-light) !important;
   }
+  .navigation-wrapper {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
   .navigation-wrapper .item {
     width: 25%;
     font-size: 20px;
@@ -98,7 +103,7 @@
     padding: 5px 0 5px var(--leftSide) !important;
   }
   .navigation-wrapper .nav-options-right {
-    margin-right: unset;
+    margin-right: unset !important;
   }
   .welcome-page .left-side .welcome-text .text {
     font-size: 20px;
@@ -170,7 +175,7 @@
             flex-direction: column;
   }
   .navigation-wrapper .nav-options-left {
-    margin-left: unset;
+    margin-left: unset !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

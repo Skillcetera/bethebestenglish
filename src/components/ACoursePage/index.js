@@ -12,7 +12,6 @@ function ACoursePage(props) {
     const index = getIndexByNameOfCourse(courseList, courseName);
     const { description, courseServices, testimonials, bigImage } =
         courseList[index];
-
     return (
         <Grid container className="ACourse-Page">
             <IntroductionOfCourse

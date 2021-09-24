@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import axiosClient from "../../axios/config";
+import { toast } from "react-toastify";
 const defaultValue = {
     nameOfCourse: "",
     name: "",
@@ -9,6 +11,7 @@ const defaultValue = {
 };
 function BuyPage(props) {
     const axios = require("axios").default;
+
     const codeToken = "1957042605:AAHVcLdMb1hBoiL6LJkUzqQWWazN_h6OT5M";
     const { match } = props;
     const courseName = match.params.courseName.toUpperCase();
@@ -30,6 +33,22 @@ function BuyPage(props) {
         axios.post(url).then(() => {
             reset();
         });
+        axiosClient
+            .post("/api/learner", {
+                email,
+                name,
+                nameOfCourse,
+                note,
+                phoneNumber,
+                date: newDay.toString(),
+            })
+            .then(() => {
+                toast.success("Đăng kí thành công!");
+            })
+            .catch((error) => {
+                const text = error.response.data.detail.message;
+                toast.warning(text);
+            });
     };
 
     return (
@@ -39,19 +58,19 @@ function BuyPage(props) {
                     Đăng kí khóa học
                 </div>
                 <form
-                    class="bg-courseColor  rounded  pt-6 pb-8 mb-4"
+                    className="pt-6 pb-8 mb-4 rounded bg-courseColor"
                     autoComplete
                     onSubmit={handleSubmit(onSubmit)}
                 >
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <label
-                            class="block text-white text-sm font-bold mb-2"
+                            className="block mb-2 text-sm font-bold text-white"
                             for="nameOfCourse"
                         >
                             Tên Khóa học
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                             id="nameOfCourse"
                             type="text"
                             required
@@ -59,15 +78,15 @@ function BuyPage(props) {
                             {...register("nameOfCourse")}
                         />
                     </div>
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <label
-                            class="block text-white text-sm font-bold mb-2"
+                            className="block mb-2 text-sm font-bold text-white"
                             for="name"
                         >
                             Tên học viên
                         </label>
                         <input
-                            class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                             id="name"
                             type="text"
                             placeholder="Tên của bạn"
@@ -75,15 +94,15 @@ function BuyPage(props) {
                             {...register("name")}
                         />
                     </div>
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <label
-                            class="block text-white text-sm font-bold mb-2"
-                            for="nameOfCourse"
+                            className="block mb-2 text-sm font-bold text-white"
+                            for="email"
                         >
                             Email
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                             id="email"
                             type="email"
                             placeholder="Email@gmail.com"
@@ -91,15 +110,15 @@ function BuyPage(props) {
                             {...register("email")}
                         />
                     </div>
-                    <div class="mb-4">
+                    <div className="mb-4">
                         <label
-                            class="block text-white text-sm font-bold mb-2"
+                            className="block mb-2 text-sm font-bold text-white"
                             for="phoneNumber"
                         >
                             Số điện thoại
                         </label>
                         <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                             id="phoneNumber"
                             type="tel"
                             placeholder="Số điện thoại của bạn/gia đình bạn"
@@ -107,26 +126,26 @@ function BuyPage(props) {
                             {...register("phoneNumber")}
                         />
                     </div>
-                    <div class="mb-6">
+                    <div className="mb-6">
                         <label
-                            class="block text-white text-sm font-bold mb-2"
-                            for="phoneNumber"
+                            className="block mb-2 text-sm font-bold text-white"
+                            for="note"
                         >
                             Ghi chú
                         </label>
                         <textarea
                             cols="40"
                             rows="5"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="phoneNumber"
+                            className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                            id="note"
                             type="tel"
                             placeholder="Nhưng thứ mà tôi cần lưu ý"
                             {...register("note")}
                         />
                     </div>
-                    <div class="flex items-center flex-col  justify-between">
+                    <div className="flex flex-col items-center justify-between">
                         <button
-                            class="bg-white text-courseColor font-bold py-2 px-5 w-full rounded focus:outline-none focus:shadow-outline"
+                            className="w-full px-5 py-2 font-bold bg-white rounded text-courseColor focus:outline-none focus:shadow-outline"
                             type="submit"
                         >
                             Đăng kí

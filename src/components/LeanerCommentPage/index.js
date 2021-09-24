@@ -11,8 +11,8 @@ function LearnerCommentPage() {
     const [percentOfTranslate, setPercentOfTranslate] = useState(0);
     const numberOfLearner = commentFromLearner.length;
 
-    let slideAnimation = (numberOfItem) => {
-        const degree = 100 / numberOfItem;
+    useEffect(() => {
+        const degree = 100 / 4;
         const learnerAvatarElement = learnerAvatar.current.childNodes;
         for (let i = 0; i < learnerAvatarElement.length; i++) {
             const avatar = learnerAvatarElement[i].lastChild;
@@ -32,17 +32,13 @@ function LearnerCommentPage() {
             currentIndex <= numberOfLearner - 1 &&
             currentIndex >= numberOfLearner - 2
         ) {
-            setPercentOfTranslate((numberOfLearner - numberOfItem) * degree);
+            setPercentOfTranslate((numberOfLearner - 4) * degree);
         }
 
         if (currentIndex > 1 && currentIndex < numberOfLearner - 2) {
             setPercentOfTranslate((currentIndex - 1) * degree);
         }
         learnerAvatar.current.style.transform = `translateX(-${percentOfTranslate}%)`;
-    };
-
-    useEffect(() => {
-        slideAnimation(4);
     }, [currentIndex, percentOfTranslate, numberOfLearner]);
 
     let renderLearnerAvata = () => {

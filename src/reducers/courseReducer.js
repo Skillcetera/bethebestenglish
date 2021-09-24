@@ -22,6 +22,11 @@ const courseReducer = (state = initialState, action) => {
             return {
                 ...state,
             };
+        case types.GET_COURSE:
+            return {
+                ...state,
+                courseList: action.payload,
+            };
         default:
             return {
                 ...state,

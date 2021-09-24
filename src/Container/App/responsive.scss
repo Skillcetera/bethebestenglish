@@ -107,6 +107,7 @@
         }
     }
     .navigation-wrapper {
+        height: fit-content !important;
         .item {
             width: 25%;
             font-size: 20px;
@@ -114,7 +115,7 @@
             padding: 5px 0 5px var(--leftSide) !important;
         }
         .nav-options-right {
-            margin-right: unset;
+            margin-right: unset !important;
         }
     }
     .welcome-page {
@@ -196,7 +197,7 @@
         height: fit-content;
         flex-direction: column;
         .nav-options-left {
-            margin-left: unset;
+            margin-left: unset !important;
             flex-direction: column;
         }
         .nav-options-right {

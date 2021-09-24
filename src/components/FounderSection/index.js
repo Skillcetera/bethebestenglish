@@ -65,11 +65,7 @@ function FounderSection() {
     return (
         <Grid container className="founder-section">
             <Grid item xs={12} lg={5} className="left-side">
-                <img
-                    src="../images/avatar.jpg"
-                    alt="avatar"
-                    className="avatar"
-                />
+                <img src="/images/avatar.JPG" alt="avatar" className="avatar" />
                 <div className="text-xl lg:text-2xl description-text">
                     Trần Nguyễn Phước
                 </div>
