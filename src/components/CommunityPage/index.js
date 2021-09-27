@@ -6,7 +6,7 @@ function CommunityPage() {
             Trang này đang trong quá trình phát triển, mọi người quay lại sau
             nha !
             <img
-                src="../images/maintenance.png"
+                src="/images/maintenance.png"
                 alt="maintenance"
                 className="mx-auto text-center lg:w-full lg:max-w-lg"
             />

@@ -1,0 +1,2 @@
+export const GET_LEARNER = "GET_LEARNER";
+export const DELETE_LEARNER = "DELETE_LEARNER";

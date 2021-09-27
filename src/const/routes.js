@@ -1,9 +1,10 @@
 import ACoursePage from "../components/ACoursePage";
-import buyPage from "../components/buyPage/index.jsx";
+import BuyPage from "../components/buyPage/index.jsx";
 import CommunityPage from "../components/CommunityPage";
 import CoursesPage from "../components/CoursesPage";
 import HomePage from "../components/HomePage";
 import LoginPage from "../components/LoginPage/index.jsx";
+import Me from "../Container/me";
 import RegisterPage from "../components/RegisterPage";
 
 export const routes = [
@@ -27,11 +28,11 @@ export const routes = [
         exact: true,
         component: LoginPage,
     },
-    {
-        path: "/account/register",
-        exact: true,
-        component: RegisterPage,
-    },
+    // {
+    //     path: "/account/register",
+    //     exact: true,
+    //     component: RegisterPage,
+    // },
     {
         path: "/courses/:courseName",
         exact: true,
@@ -40,6 +41,11 @@ export const routes = [
     {
         path: "/courses/:courseName/buy",
         exact: true,
-        component: buyPage,
+        component: BuyPage,
+    },
+    {
+        path: "/me",
+        exact: true,
+        component: Me,
     },
 ];
