@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import axiosClient from "../../axios/config";
 
 export default function CourseControlTable(props) {
     const { data } = props;
+    const onDeleteCourse = (courseName) => {
+        axiosClient.delete(`/api/course/${courseName}`);
+    };
     return (
         <div className="flex flex-col mt-6">
             <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -67,12 +70,14 @@ export default function CourseControlTable(props) {
                                         </td>
 
                                         <td className="px-6 py-3 text-sm font-medium text-right whitespace-nowrap">
-                                            <Link
-                                                to="/me/course-form"
+                                            <button
                                                 className="font-bold text-loginColor "
+                                                onClick={() =>
+                                                    onDeleteCourse(course.name)
+                                                }
                                             >
-                                                Edit
-                                            </Link>
+                                                Delete
+                                            </button>
                                         </td>
                                     </tr>
                                 ))}

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { useForm } from "react-hook-form";
@@ -81,12 +80,12 @@ function LoginPage() {
                         >
                             Đăng nhập
                         </button>
-                        <Link
+                        {/* <Link
                             to="/account/register"
                             className="inline-block w-full mt-4 text-sm font-bold text-right text-white align-baseline hover:underline"
                         >
                             Tạo tại khoản ngay
-                        </Link>
+                        </Link> */}
                     </div>
                 </form>
                 <div className="my-0 section-line"></div>

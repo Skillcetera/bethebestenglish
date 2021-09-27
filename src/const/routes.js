@@ -28,11 +28,11 @@ export const routes = [
         exact: true,
         component: LoginPage,
     },
-    {
-        path: "/account/register",
-        exact: true,
-        component: RegisterPage,
-    },
+    // {
+    //     path: "/account/register",
+    //     exact: true,
+    //     component: RegisterPage,
+    // },
     {
         path: "/courses/:courseName",
         exact: true,
