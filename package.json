@@ -2,6 +2,7 @@
     "name": "be-the-best-english-web",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://skillcetera.github.io/bethebestenglish",
     "dependencies": {
         "@craco/craco": "^6.2.0",
         "@hookform/resolvers": "^2.8.0",
