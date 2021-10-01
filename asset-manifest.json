@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/bethebestenglish/static/css/main.9a76aabf.chunk.css",
+    "main.js": "/bethebestenglish/static/js/main.c2a1e6a0.chunk.js",
+    "runtime-main.js": "/bethebestenglish/static/js/runtime-main.e2afcf2b.js",
+    "static/css/2.79c4f413.chunk.css": "/bethebestenglish/static/css/2.79c4f413.chunk.css",
+    "static/js/2.41f3214c.chunk.js": "/bethebestenglish/static/js/2.41f3214c.chunk.js",
+    "static/js/3.500be028.chunk.js": "/bethebestenglish/static/js/3.500be028.chunk.js",
+    "index.html": "/bethebestenglish/index.html",
+    "static/js/2.41f3214c.chunk.js.LICENSE.txt": "/bethebestenglish/static/js/2.41f3214c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2afcf2b.js",
+    "static/css/2.79c4f413.chunk.css",
+    "static/js/2.41f3214c.chunk.js",
+    "static/css/main.9a76aabf.chunk.css",
+    "static/js/main.c2a1e6a0.chunk.js"
+  ]
+}
